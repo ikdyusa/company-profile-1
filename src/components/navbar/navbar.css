@@ -1,0 +1,815 @@
+a {
+    color: black;
+}
+
+.header-container {
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    font-weight: 700;
+    box-shadow: 0 0.1px 1px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.header-parent {
+    min-width: 1000px;
+    background-color: inherit;
+    padding: 15px 5px;
+    margin: 0 auto;
+}
+
+.sticky {
+    position: fixed;
+}
+
+.header-container.sticky .top-list.inside-top-menu>li>.top-item {
+    max-height: 0;
+}
+
+/* TOPBAR */
+
+/* TOPBAR LIST */
+.top-list {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.top-item{
+    padding: 0 15px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    max-height: 2rem;
+}
+
+.top-item:hover {
+    text-decoration: underline;
+    color: crimson;
+    opacity: 1;
+}
+
+/* TOPBAR LIST ITEM */
+
+.top-item {
+    text-transform: capitalize;
+}
+
+
+/* NAVBAR */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    color: #014a94;
+}
+
+.nav-logo span {
+    border: 5px solid #014a94;
+    height: 40px;
+    width: 100px;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+.nav-logo span::after {
+    content: "BANK";
+    letter-spacing: -13px;
+    font-size: 60px;
+    font-weight: 100;
+    width: 40px;
+    display: block;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    color: #014a94;
+    left: 14%;
+}
+
+/* NAVBAR LOGO */
+.nav-logo>a{
+    text-decoration: none;
+    display: inline;
+}
+
+/* NAVBAR LIST CONTAINER*/
+/* NAVBAR LIST CONTAINER CONTAINS TOPBAR LIST */
+.top-list.inside-nav-list-cont {
+    display: none;
+}
+
+/* NAVBAR LIST */
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* NAVBAR LIST ITEM */
+.nav-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 15px 15px;
+}
+
+.nav-item-tab-mobile {
+    display: none;
+}
+/* NAVBAR LIST ITEM HOVERLIST CONTAINER */
+
+.hover-menu-container {
+    position: fixed;
+    right: 0;
+    width: 100%;
+    background-color:white;
+    height: auto;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    margin-top: 25px;;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    
+}
+
+.hover-menu-container-active, .nav-list li:hover~.triangle-effect {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-menu-container:hover{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* NAVBAR LIST ITEM HOVERLIST PARENT */
+
+
+.hover-menu-parent {
+    padding: 1rem;
+}
+
+.hover-menu-parent h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.backward-arrow {
+    display: none;
+}
+
+/* NAVBAR LIST ITEM HOVERLIST */
+
+.hover-menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hover-menu-h2>a {
+    text-decoration: none;
+    color: white;
+}
+
+.hover-menu-h2>a:hover {
+    text-decoration: underline;
+}
+
+
+.hover-item-h3, .hover-item ul {
+    padding: 0 1rem;
+}
+
+/* NAVBAR LIST ITEM HOVERLIST ITEM */
+
+.hover-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-item-h3 a {
+    color: crimson;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.hover-list li a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 0;
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-item-h3 a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.hover-item ul li a:hover {
+    color: darkturquoise;
+}
+
+/* NAVBAR LIST ITEM HOVERLIST ITEM EFFECT*/
+
+.underline-effect {
+    position: absolute;
+    background-color: crimson;
+    left: 0;
+    bottom: 0;
+    transition: all 0.2s ease-in-out;
+    border-radius: 20px;
+    height: 5px;
+}
+
+.triangle-effect {
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+    height: 1px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.triangle-effect::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin-top: 15px;
+    z-index: 10;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%) rotate(45deg);
+    box-shadow: -3px -3px 3px rgb(0 0 0 / 10%);
+}
+
+/* NAVBAR BUTTON */
+.login-container {
+    position: relative;
+}
+
+
+.login-container>button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border-width: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    display: block;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.login-container>button {
+        /* ff 3.6+ */
+    background:-moz-linear-gradient(90deg, rgba(255, 224, 165, 1)  0%, rgba(255, 145, 0, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, rgba(255, 224, 165, 1)  0%, rgba(255, 145, 0, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, rgba(255, 224, 165, 1)  0%, rgba(255, 145, 0, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EE82EE', endColorstr='#FF9100', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, rgba(255, 224, 165, 1)  0%, rgba(255, 145, 0, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, rgba(255, 224, 165, 1)  0%, rgba(255, 145, 0, 1) 100%);
+}
+
+
+.login-container>button.active::after {
+    content: "";
+    position: fixed;
+    top: 0%;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 1s;
+    transition: all 0.5s ease-in-out;
+    z-index:1;
+    
+}
+
+.login-container>button:hover {
+    background: rgba(255, 145, 0, 1);
+}
+
+.login-options {
+    visibility: hidden;
+    opacity: 0;
+    right: 0%;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    margin-top: 1rem;
+}
+
+.login-options:after {
+    content:"";
+    position:fixed;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.3)
+}
+
+.login-container>button.active{
+    background: rgba(255, 145, 0, 1);
+}
+
+.login-container>button.active+.login-options {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.login-options>ul>li>a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 240px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: white;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 5px black;
+    z-index:1;
+    transform:all 0.5s ease-in-out;
+    position:relative;
+}
+
+.login-options>ul>li:nth-child(1)>a {
+    color: yellow;
+    transition-delay: 50ms;
+
+}
+
+.login-options>ul>li:nth-child(2)>a {
+    color: red;
+    transition-delay: 150ms;
+}
+.login-options>ul>li:nth-child(3)>a {
+    color: green;
+    transition-delay: 250ms;
+}
+
+.login-options>ul>li>a>i {
+    width: 35px;
+    display:block;
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+
+.login-arrow::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    position: absolute;
+    transform: rotate(45deg) translateY(-50%);
+    top: 30%;
+    right: 1rem;
+    box-shadow: 3px 3px 0px white;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.login-container>button.active>.login-arrow::after {
+    top: 60%;
+    box-shadow: -3px -3px 0px crimson
+}
+
+.login-container>button.active>button::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+}
+
+.hamburg-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    .header-parent {
+        min-width: 450px;
+    }
+
+    /* TOPBAR */
+
+    /* TOPBAR LIST */
+
+    /* TOPBAR LIST ITEM */
+
+    /* NAVBAR */
+
+    /* NAVBAR LOGO */
+
+    /* NAVBAR LIST CONTAINER*/
+    /* NAVBAR LIST CONTAINER CONTAINS TOPBAR LIST */
+
+    /* NAVBAR LIST */
+    .nav-list>li {
+        position: relative;
+    }
+
+    /* NAVBAR LIST ITEM */
+    .nav-item {
+        position: relative;
+    }
+    /* NAVBAR LIST ITEM HOVERLIST CONTAINER */
+
+    /* NAVBAR LIST ITEM HOVERLIST PARENT */
+
+    /* NAVBAR LIST ITEM HOVERLIST */
+
+    /* NAVBAR LIST ITEM HOVERLIST ITEM */
+
+    /* NAVBAR LIST ITEM HOVERLIST ITEM EFFECT*/
+    .underline-effect, .triangle-effect {
+        display: none;
+    }
+
+    .underline-effect-tab {
+        position: absolute;
+        height: 5px;
+        width: 90%;
+        transform: scale(0);
+        transition: all 0.5s ease-in-out;
+        margin: 0 5%;
+        background-color: crimson;
+        border-radius: 20px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .triangle-effect-tab {
+        position: absolute;
+        width: 90%;
+        margin: 0 5%;
+        height: 1px;
+    }
+
+    .triangle-effect-tab::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        margin-top: 15px;
+        z-index: 10;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%) rotate(45deg);
+        box-shadow: -3px -3px 3px rgb(0 0 0 / 10%);
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-item:hover~.underline-effect-tab, 
+    .hover-menu-container:hover~.underline-effect-tab {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-item:hover~.triangle-effect-tab::after, 
+    .hover-menu-container:hover~.triangle-effect-tab::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    
+
+    /* .nav-item:hover~.underline-effect, .hover-menu-container:hover~.underline-effect,
+    .nav-item:hover~.triangle-effect, .hover-menu-container:hover~.triangle-effect {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    } */
+
+    /* NAVBAR BUTTON */
+
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-item, .hover-item-h3 a, .hover-list li a, .hover-menu-h2, .top-list a {
+        color: white;
+    }
+    /* TOPBAR */
+
+    /* TOPBAR LIST */
+    .top-list.inside-top-menu {
+        display: none;
+    }
+
+
+    /* TOPBAR LIST ITEM */
+
+    /* NAVBAR */
+
+    /* NAVBAR LOGO */
+
+    /* NAVBAR LIST CONTAINER*/
+    .top-item {
+        padding: 5px 10px;
+    }
+    .nav-list-container {
+        position: fixed;
+        background-color: black;
+        top: 0;
+        right: -55%;
+        height: 100%;
+        width: 45%;
+        padding: 0.2rem;
+        transition: all 0.5s ease-in-out;
+        direction: rtl;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 10;
+    }
+
+    .nav-list-container>ul  {
+        transition: all 0.5s ease-in-out;
+        right: 0;
+        direction: ltr;
+    }
+
+    .nav-list-container>ul.hide{
+        right: 100%;
+    }
+
+    .nav-list-container.active {
+        right: 0%;
+    }
+    /* NAVBAR LIST CONTAINER CONTAINS TOPBAR LIST */
+    .top-list.inside-nav-list-cont {
+        display: block;
+    }
+
+    /* NAVBAR LIST */
+    .nav-list {
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+    }
+
+
+    /* NAVBAR LIST ITEM */
+    .nav-list>li {
+        position: initial;
+    }
+    .nav-item {
+        display: none;
+    }
+
+    .nav-item-tab-mobile {
+        display: block;
+        padding: 10px;
+        font-size: 1rem;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .nav-item-tab-mobile::before {
+        content: "\276F";
+        position: absolute;
+        right: 1rem;
+        transform: translateX(50%);
+
+    }
+
+    .nav-item-tab-mobile:hover {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* NAVBAR LIST ITEM HOVERLIST CONTAINER */
+
+    /* NAVBAR LIST ITEM HOVERLIST PARENT */
+    .hover-menu-container {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        margin-top: 0;
+        height: 100%;
+        background-color: transparent;
+    }
+    .hover-menu-container:hover {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .hover-menu-container.active {
+        visibility: visible;
+        opacity: 1;
+        
+    }
+
+    .hover-menu-parent {
+        padding: 0;
+    }
+    .backward-arrow {
+        display: flex;
+        padding: 5px;
+        border-radius: 16px;
+        background-color: crimson;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .backward-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: black;
+    }
+
+    .backward-arrow-symbol {
+        display: block;
+        padding-right: 3px;
+        pointer-events: none;
+    }
+
+    .backward-arrow-text {
+        display: block;
+        pointer-events: none;
+    }
+
+    .hover-menu {
+        flex-direction: column;
+    }
+
+    .hover-menu-h2>a {
+        text-transform: uppercase;
+    }
+
+    .hover-list {
+        position: relative;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .hover-list li a{
+        padding: 5px 10px;
+    }
+    /* NAVBAR LIST ITEM HOVERLIST */
+
+    .hover-item-h3 {
+        position: relative;
+        border-top: 1px rgba(255, 255, 255, 0.4);
+        border-style: solid;
+        padding: 10px 10px;
+    }
+    .hover-item-h3.active~.hover-list {
+        max-height: 400px;
+        
+    }
+
+    .dropdown-arrow::before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: black;
+        position: absolute;
+        right: 1rem;
+        transform: translateY(-50%) rotate(45deg);
+        top: 50%;
+        box-shadow: 2px -2px white;
+        transition: all 0.25s ease-in-out;
+        pointer-events: none;
+    }
+
+    .hover-item-h3.active>.dropdown-arrow::before {
+        box-shadow: -2px -2px crimson;
+    }
+
+
+    /* NAVBAR LIST ITEM HOVERLIST ITEM */
+
+    /* NAVBAR LIST ITEM HOVERLIST ITEM EFFECT*/
+
+    .underline-effect-tab, .triangle-effect-tab{
+        display: none;
+    }
+
+    /* NAVBAR BUTTON */
+    .nav-button-container {
+        display: flex;
+        width: 40%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .hamburg-menu {
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        width: 40px;
+        justify-content: space-between;
+        transition: all 0.5s ease-in-out;
+
+    }
+    .hamburg-menu span {
+        display: block;
+        height: 3px;
+        pointer-events: none;
+    }
+
+    .hamburg-menu.inside-button-component span {
+        background-color: black;
+        border-radius: 16px;
+    }
+    .hamburg-menu.inside-nav-list-cont {
+        height: 30px;
+        width: 30px;
+        padding: 10px;
+    }
+
+
+
+    .hamburg-menu.inside-nav-list-cont span{
+        background-color: crimson;
+        transform-origin: 0;
+        border-radius: 10px;
+    }
+
+    .hamburg-menu.inside-nav-list-cont span:nth-child(1) {
+        transform: rotate(45deg) scale(1.25);
+    }
+
+    
+    .hamburg-menu.inside-nav-list-cont span:nth-child(2) {
+        transform: scale(0);
+    }
+
+    .hamburg-menu.inside-nav-list-cont span:nth-child(3) {
+        transform: rotate(-45deg) scale(1.25);
+    }
+
+    .hidden-button {
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    .hidden-button::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        right: -100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-list-container.active+.nav-button-container>.hidden-button::after {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}

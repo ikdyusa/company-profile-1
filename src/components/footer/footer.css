@@ -1,0 +1,123 @@
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #014a94;
+    padding: 30px 0;
+}
+
+.footer-container h2 {
+    color: rgb(0, 49, 98);
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container a, .logo {
+    color: #014a94;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+.footer-container li{
+    margin-bottom: 5px
+}
+
+.footer-address {
+    color: black;
+}
+
+.footer-address>ul>li:first-child {
+    margin-bottom: 15px;
+}
+
+.footer-address>ul>li:last-child {
+    gap: 1rem;
+    display: flex;
+}
+
+.footer-contact li{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-company-licensed>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-company-licensed img{
+    width: 150px;
+    height: auto;
+}
+
+.footer-container input {
+    display: none;
+}
+
+@media screen and (max-width: 906px) {
+    .footer-container {
+        padding: 30px 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5em
+    }
+
+    .footer-container input {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        opacity: 1;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: relative;
+    }
+    .footer-container input::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(45deg);
+        top: -50%;
+        position: absolute;
+        box-shadow: 4px 4px 0 #014a94;
+    }
+    .footer-container h2>span {
+        width: 100%;
+    }
+
+    .footer-container input:checked::after {
+        top: 50%;
+        box-shadow: -4px -4px 0 #014a94;
+    }
+
+    .footer-container>div>ul{
+        overflow-y: hidden;
+        max-height: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .footer-container h2:has(input:checked)~ul {
+        max-height: 400px;
+
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+    }
+
+    .footer-container>div:not(:first-child){
+        border-top: 1px solid rgba(128, 128, 128, 0.512);
+    }
+}

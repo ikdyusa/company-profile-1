@@ -1,0 +1,85 @@
+.features-container {
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5%;
+    color: #627d92;
+    font-size: 1rem;
+} 
+
+.features-main-desc {
+    padding-right: 35%;
+}
+
+.features-main-desc h1 {
+    padding-bottom: 30px;
+    color: rgb(0, 49, 98);
+}
+
+.features-main-desc p {
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.features-features-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 25%;
+    gap: 2rem;
+}
+
+.features-features-container>div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 400px;
+}
+
+.features-features-container .icon>i {
+    font-size: 35px;
+    color: rgb(1, 74, 148);
+}
+
+.features-features-container .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 15%;
+}
+
+.features-features-container .description {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 85%;
+}
+
+
+.features-features-container .description>h3 {
+    color: rgb(1, 74, 148);
+    text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 1212px) {
+    .features-features-container>div {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .features-container {
+        text-align: justify;
+    }
+    .features-features-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features-features-container>div {
+        width: 100%;
+    }
+
+    .features-main-desc, .features-features-container {
+        padding-right: unset;
+    }
+}

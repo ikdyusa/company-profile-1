@@ -1,0 +1,88 @@
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+}
+
+.subscribe-description {
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+    padding: 30px;
+}
+
+.subscribe-description>p {
+    font-size: 28px;
+
+}
+
+.subscribe-description>p>span {
+    font-weight: 600;
+    color: crimson;
+}
+
+.subscribe-form-container {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+    width: 100%;
+}
+
+.subscribe-form-container>form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-form-container>form>input {
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    background-color: rgba(255, 145, 0, 0.5);
+    border: none;
+    margin-right: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+}
+
+input::placeholder {
+    color:  rgba(255, 255, 255, 0.5);
+}
+
+.subscribe-form-container>form>button {
+    height: 45px;
+    background-color: rgba(255, 145, 0, 0.8);
+    border: none;
+    color: white;
+    padding: 0 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.subscribe-form-container>form>button:hover {
+    background-color: rgba(255, 145, 0, 0.9);
+}
+
+.subscribe-form-container>form>button:active {
+    background-color: rgba(255, 145, 0, 1);
+}
+
+input:focus-visible {
+    outline: none !important;
+}
+
+@media screen and (max-width: 740px) {
+    .subscribe-container {
+        flex-direction: column;
+    }
+
+    .subscribe-description>p {
+        font-size: 18px;
+    }
+}

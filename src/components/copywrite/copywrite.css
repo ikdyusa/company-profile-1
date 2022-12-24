@@ -1,0 +1,25 @@
+.copywrite-container {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    background-color: #014a94;
+    color: white;
+    font-size: 12px;
+}
+
+.copywrite-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.copywrite-container a:hover {
+    text-decoration:  underline;
+}
+
+.copywrite-container>ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: disc;
+}
