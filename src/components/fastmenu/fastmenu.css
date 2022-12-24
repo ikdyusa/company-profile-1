@@ -122,6 +122,10 @@
     border: 1px rgba(0, 0, 0, 1);
 }
 
+.fast-menu-list-item-search input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .fast-menu-list-item-lists input {
     display: none;
 }

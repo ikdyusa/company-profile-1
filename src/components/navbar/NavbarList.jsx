@@ -183,7 +183,7 @@ function UnderlineEffect() {
                 setUnderlinePos({width: "137px", left: "597px"})
                 break;
             case "/aboutbank":
-                setUnderlinePos({width: "87px", left: "752px"})
+                setUnderlinePos({width: "103px", left: "752px"})
                 break;
             default:
                 setUnderlinePos(prev => prev)
