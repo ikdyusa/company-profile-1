@@ -93,7 +93,7 @@ function CategoryHeaderContainer() {
         )
     }
     return (
-            <ul className='news-and-promotion-category-header'>
+            <ul className='news-and-promotion-category-header reveal'>
                 <CategoryHeader>All</CategoryHeader>
                 <CategoryHeader>Promotion</CategoryHeader>
                 <CategoryHeader>News</CategoryHeader>
@@ -109,7 +109,7 @@ function CategoryItemsContainer() {
     const {state, dispatch} = useContext(NewsAndPromotionContext)
     const CategoryItem = ({children}) => {
         return (
-            <li className={`${state.categoryActive === children.toLowerCase()?"active":""}`}>
+            <li className={`${state.categoryActive === children.toLowerCase()?"active reveal-active":""}`}>
                 <ul className='news-and-promotion-category-items'
                     style={{left: `${state.leftSwipe}px`}}>
                     {posts.filter((x,y) => {

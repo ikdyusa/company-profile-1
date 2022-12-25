@@ -3,7 +3,7 @@ import './footer.css'
 function Footer() {
     return (
         <div className="footer">
-            <div className="footer-container">
+            <div className="footer-container reveal">
                 <div className="footer-address">
                     <h2>
                         <span>Head Office Bank</span>

@@ -63,7 +63,7 @@ function CarouselImages() {
                                 className={`${displaySlide===y?"active-slide":""} slide`}
                                 style={{backgroundImage: `url("${x.url}")`}}
                                 >
-                                    <div>
+                                    <div className=''>
                                         <p>{x.other.desc}</p>
                                         <div role={"button"}><a href={x.other.link}>See More</a></div>
                                     </div>

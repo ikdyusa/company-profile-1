@@ -81,8 +81,8 @@ function Sponsor() {
     useEffect(() => setWindowWidth(window.innerWidth), [window.innerWidth])
     return (
         <div className="sponsor">
-            <h1>Subsidiaries</h1>
-            <div className="sponsor-container" 
+            <h1 className='reveal'>Subsidiaries</h1>
+            <div className="sponsor-container reveal" 
                 onMouseEnter={() => setMouseEnter(true)}
                 onMouseLeave={() => setMouseEnter(false)}>
                 <div className='sponsor-container-btn'>

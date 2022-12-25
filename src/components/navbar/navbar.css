@@ -84,16 +84,16 @@ a {
 
 .nav-logo span::after {
     content: "BANK";
-    letter-spacing: -13px;
-    font-size: 60px;
-    font-weight: 100;
+    letter-spacing: -3px;
+    font-size: 39px;
+    font-weight: 600;
     width: 40px;
     display: block;
     position: absolute;
     transform: translateY(-50%) translateX(-50%);
     top: 50%;
     color: #014a94;
-    left: 14%;
+    left: 18.5%;
 }
 
 /* NAVBAR LOGO */

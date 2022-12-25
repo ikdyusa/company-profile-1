@@ -14,3 +14,14 @@ body {
 ul {
     list-style-type: none;
 }
+
+.reveal {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.reveal.reveal-active {
+    transform: translateY(0);
+    opacity: 1;
+}

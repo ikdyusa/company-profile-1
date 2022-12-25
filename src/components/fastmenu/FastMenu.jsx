@@ -131,7 +131,7 @@ function UpperPart () {
 
 function LowerPart() {
     return (
-        <div className='fast-menu-lower-part'>
+        <div className='fast-menu-lower-part reveal'>
             <ul className='fast-menu-menu'>
                 {menuMenu.map((x,y) => {
                     return <li key={y*100}>

@@ -29,21 +29,18 @@ const featuresText = [
     },
 ]
 
-
-
-
 function Features() {
     return (
         <div className="features-container"
             style={{backgroundImage: "url('./public/assets/features/leone-venter-VieM9BdZKFo-unsplash.jpg')"}}>
             <div className="features-main-desc">
-                <h1>Why Banking With BANK?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada ac felis rhoncus elementum. Proin a ipsum nunc. Etiam interdum justo vitae magna posuere consectetur.</p>
+                <h1 className='reveal'>Why Banking With BANK?</h1>
+                <p className='reveal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada ac felis rhoncus elementum. Proin a ipsum nunc. Etiam interdum justo vitae magna posuere consectetur.</p>
             </div>
             <div className="features-features-container">
                     {featuresText.map((x,y) => {
                         return (
-                            <div key={y}>
+                            <div key={y} className='reveal'>
                                 <div className='icon'>{x.icon}</div>
                                 <div className='description'>
                                     <h3>{x.title}</h3>
